@@ -2,5 +2,5 @@
 def print_list_integer(my_list=[]):
     idx = 0
     for idx2 in range(len(my_list)):
-        print(my_list[idx])
+        print(f"{my_list[idx]}".format(my_list))
         idx += 1
