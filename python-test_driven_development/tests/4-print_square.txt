@@ -1,0 +1,79 @@
+================================
+Test cases for 4-print_square.py
+================================
+
+This library has a function that prints a square:
+The side of the square is provided. That values
+provided must be only strings, otherwise, TypeError 
+will be split with error messages.
+
+    >>> print_square = __import__('4-print_square').print_square
+
+Documentation
+=============
+Here we verify if our modules an funtions are documented, for holberton requirements is a must.
+we use __doc__ to verify module's and function's Documentation
+    >>> module_doc = __import__("4-print_square").__doc__
+    >>> print(len(module_doc) > 0)
+    True
+
+    >>> funciont_doc = __import__("4-print_square").print_square.__doc__
+    >>> print(len(funciont_doc) > 0)
+    True
+
+Test Cases
+==========
+Testing a square with size int
+-----------------------------
+
+        >>> print_square(4)
+        ####
+        ####
+        ####
+        ####
+
+Testing a square with size float
+--------------------------------
+
+        >>> print_square(10.5)
+        Traceback (most recent call last):
+        ...
+        TypeError: size must be an integer
+
+Testing a square with size a string
+-----------------------------------
+
+        >>> print_square("8")
+        Traceback (most recent call last):
+        ...
+        TypeError: size must be an integer
+
+Testing a square with size negative
+----------------------------------
+
+        >>> print_square(-1)
+        Traceback (most recent call last):
+        ...
+        ValueError: size must be >= 0
+
+Testing a square with size negative float
+--------------------------------------
+
+        >>> print_square(-12.5)
+        Traceback (most recent call last):
+        ...
+        TypeError: size must be an integer
+
+Testing a square with size zero
+-------------------------------
+
+        >>> print_square(0)
+        
+
+Testing a square without arguments
+----------------------------------
+
+        >>> print_square()
+        Traceback (most recent call last):
+        ...
+        TypeError: print_square() missing 1 required positional argument: 'size'
