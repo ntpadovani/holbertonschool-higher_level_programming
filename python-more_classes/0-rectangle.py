@@ -1,9 +1,8 @@
 #!/usr/bin/python3
-'''A simple rectangle class.'''
+'''A simple empty rectangle class.'''
 
 Class Rectangle:
-        def __init__(self,l,w)
-                self.l=l
-                self.w=w
-
+        
+        '''Creates an empty python class.'''
+        PASS
 
