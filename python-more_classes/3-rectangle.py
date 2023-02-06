@@ -2,12 +2,12 @@
 """
 This module contains the definition of
 a Rectangle class
-""
+"""
 
 
 class Rectangle:
     """Defines a rectangle
-        Args:
+        Args
             width (int): width of rectangle
             height (int): height of rectangle
     """
