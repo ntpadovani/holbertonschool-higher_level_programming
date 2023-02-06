@@ -1,0 +1,49 @@
+======================
+Test cases for 5-text_indentation.py
+======================
+
+This library has a function that  prints a text with 2 
+new lines after each of these characters: ``.``, ``?`` and ``:``
+
+    >>> text_indentation = __import__("5-text_indentation").text_indentation
+
+Documentation
+=============
+
+    >>> module_doc = __import__("5-text_indentation").__doc__
+    >>> print(len(module_doc) > 0)
+    True
+
+    >>> func_doc = __import__("5-text_indentation").text_indentation.__doc__
+    >>> print(len(func_doc) > 0)
+    True
+
+Testing a integer number
+------------------------
+
+        >>> text_indentation(25)
+        Traceback (most recent call last):
+        ...
+        TypeError: text must be a string
+
+Testing a correctly written text
+--------------------------------
+
+        >>> text_indentation("This is a building. This is my apartment and my apartment has: a window, a door and walls. Does it has a roof? yes, it has it")
+        This is a building.
+        <BLANKLINE>
+        This is my apartment and my apartment has:
+        <BLANKLINE>
+        a window, a door and walls.
+        <BLANKLINE>
+        Does it has a roof?
+        <BLANKLINE>
+        yes, it has it
+
+Testing no argument written text
+-------------------------------
+
+        >>> text_indentation()
+        Traceback (most recent call last):
+        ...
+        TypeError: text_indentation() missing 1 required positional argument: 'text'
