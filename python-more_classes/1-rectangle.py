@@ -5,25 +5,25 @@ This is a rectangle class
 
 
 class Rectangle:
-    """Created a class named Rectangle
-    Args:
-    width (int): Integers representing the width of a rectangle
-    height (int): Integer representing the height of a rectangle
+    """Creates a class named Rectangle
+        Args:
+            width (int): Integers representing the width of a rectangle
+            height (int): Integer representing the height of a rectangle
     """
 
-    def __init__(self,width=0,height=0)
+    def __init__(self,width=0,height=0):
         if Type(width) is not int:
             raise TypeError('width must be an integer')
         elif width < 0:
             raise ValueError('width must be >= 0')
         else:
-            self.width = width
+            self.__width = width
         if Type(height) is not int:
             raise TypeError('height must be an integer')
         elif height < 0:
             raise ValueError('height must be >= 0')
         else:
-            self.height = height
+            self.__height = height
 
 @property
 def width(self):
