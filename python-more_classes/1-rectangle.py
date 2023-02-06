@@ -1,9 +1,7 @@
 #!/usr/bin/python3
 
 
-"""
-This is a rectangle class
-"""
+"""This is a rectangle class"""
 class Rectangle:
     """Created a class named Rectangle
     Args:
