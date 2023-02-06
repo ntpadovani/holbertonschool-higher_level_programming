@@ -1,0 +1,60 @@
+======================
+Test cases for 3-say_my_name.py
+======================
+
+This library has a function that prints a full name:
+My name is <first name> <last name>adds , That values
+provided must be only strings, otherwise, TypeError 
+will be split with error messages.
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Documentation
+=============
+Here we verify if our modules an funtions are documented
+we use __doc__ to verify module's and function's Documentation
+    >>> module_doc = __import__("3-say_my_name").__doc__
+    >>> print(len(module_doc) > 0)
+    True
+
+    >>> funciont_doc = __import__("3-say_my_name").say_my_name.__doc__
+    >>> print(len(funciont_doc) > 0)
+    True
+
+Test Cases
+==========
+Testing general print :say the name with first_name and last_name
+-----------------------------------------------------------------
+
+        >>> say_my_name("John", "Smith")
+        My name is John Smith
+
+Testing one argument : say the name with only first_name
+------------------------------------------------------
+
+        >>> say_my_name("Bob")
+        My name is Bob 
+
+Testing an integer: say the name with a int as a first_name
+-----------------------------------------------------------
+
+        >>> say_my_name(12, "Bob")
+        Traceback (most recent call last):
+        ...
+        TypeError: first_name must be a string
+
+Testing an integer: say the name with a int as a last_name
+---------------------------------------------------------
+
+        >>> say_my_name("Bob", 12)
+        Traceback (most recent call last):
+        ...
+        TypeError: last_name must be a string
+
+Testing 0 arguments: say the name without arguments
+---------------------------------------------------
+
+        >>> say_my_name()
+        Traceback (most recent call last):
+        ...
+        TypeError: say_my_name() missing 1 required positional argument: 'first_name'
