@@ -5,7 +5,7 @@ a Rectangle class
 """
 
 
-class Rectangle
+class Rectangle:
     """Defines a rectangle
         Args:
             width (int): width of rectangle
