@@ -5,6 +5,6 @@ rectangle class.
 """
 
 
-Class Rectangle:
+class Rectangle:
         """Creates an empty rectangle class."""
         pass
