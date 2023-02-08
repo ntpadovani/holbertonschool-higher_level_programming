@@ -1,0 +1,49 @@
+Import function:
+    >>> MyList = __import__('1-my_list').MyList
+
+Test 1: Normal Usage
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(2)
+    >>> my_list.append(4)
+    >>> my_list.append(3)
+    >>> my_list.append(5)
+    >>> my_list.print_sorted()
+    [1, 2, 3, 4, 5]
+
+Test 2: Empty list
+    >>> my_list = MyList()
+    >>> my_list.print_sorted()
+    []
+
+Test 3: Passing neg integers
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(2)
+    >>> my_list.append(4)
+    >>> my_list.append(3)
+    >>> my_list.append(-5)
+    >>> my_list.print_sorted()
+    [-5, 1, 2, 3, 4]
+
+Test 4: Test if function returns new list
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(3)
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.append(5)
+    >>> my_list.print_sorted() is my_list
+    [1, 1, 3, 4, 5]
+    False
+
+Test 5: Change object and print
+    >>> my_list[0] = 3000
+    >>> print(my_list)
+    [3000, 3, 1, 4, 5]
+    >>> my_list.print_sorted()
+    [1, 3, 4, 5, 3000]
+
+Test 6: Use of __str__
+    >>> print(my_list.__str__())
+    [3000, 3, 1, 4, 5]
