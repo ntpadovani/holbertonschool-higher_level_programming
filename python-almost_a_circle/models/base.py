@@ -61,7 +61,7 @@ class Base:
     def load_from_file(cls):
         """
         Be careful with this function, if an error
-        occurs 
+        occurs
         """
         filename = f'{cls.__name__}.json'
         list_of_instances = cls.from_json_string(None)
